@@ -1,5 +1,6 @@
 public class AuthService {
     private static AuthService instance;
+    private AuthStrategy strategy;
 
     private AuthService() {}
 
@@ -9,8 +10,6 @@ public class AuthService {
         }
         return instance;
     }
-
-    private AuthStrategy strategy;
 
     public void setAuthStrategy(AuthStrategy strategy) {
         this.strategy = strategy;
